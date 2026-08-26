@@ -39,8 +39,8 @@ export default function AllPosts() {
 							<td>{a.title}</td>
 							<td>{a.category}</td>
 							<td>
-								<Link to={`/edit/${a.id}`}>✏️</Link>
-								<button onClick={() => handleTrash(a)}>🗑️</button>
+								<Link to={`/edit/${a.id}`}>Edit</Link>
+								<button onClick={() => handleTrash(a)}>Trash</button>
 							</td>
 						</tr>
 					))}
