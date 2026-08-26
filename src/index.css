@@ -99,7 +99,7 @@ input, textarea {
 }
 
 textarea {
-  min-height: 120px;
+  min-height: 220px;
   resize: vertical;
 }
 
@@ -129,6 +129,11 @@ button:hover,
   display: flex;
   gap: 8px;
   margin-top: 8px;
+}
+
+.actions button {
+  flex: 1;
+  justify-content: center;
 }
 
 .tabs {
