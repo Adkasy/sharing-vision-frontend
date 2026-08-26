@@ -32,7 +32,7 @@ export default function AddNew() {
 
 	return (
 		<div>
-			<Link to="/">← Back</Link>
+			<Link to="/" className="btn">← Back</Link>
 			<h2>Add New Article</h2>
 			<div className="field-group">
 				<div>

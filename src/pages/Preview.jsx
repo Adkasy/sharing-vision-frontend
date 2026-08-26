@@ -16,7 +16,7 @@ export default function Preview() {
 
 	return (
 		<div>
-			<Link to="/">← Back</Link>
+			<Link to="/" className="btn">← Back</Link>
 			<h2>Preview</h2>
 			{published.map((a) => (
 				<div key={a.id}>
