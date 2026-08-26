@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -9,6 +9,8 @@
 
 body {
   margin: 0;
+  background: #fff;
+  color: #222;
 }
 
 #root {
@@ -17,8 +19,13 @@ body {
   padding: 24px 16px;
 }
 
+h2 {
+  margin: 20px 0 4px;
+}
+
 table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   margin-top: 16px;
 }
@@ -27,6 +34,45 @@ th, td {
   text-align: left;
   padding: 8px;
   border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+th:last-child, td:last-child {
+  width: 84px;
+  white-space: normal;
+}
+
+.row-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #444;
+}
+
+.icon-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-btn:hover {
+  background: #f0883e;
+  border-color: #f0883e;
+  color: #fff;
 }
 
 form, .field-group {
@@ -38,11 +84,14 @@ form, .field-group {
 }
 
 label {
+  display: block;
   font-size: 14px;
   font-weight: 600;
+  margin-bottom: 4px;
 }
 
 input, textarea {
+  width: 100%;
   padding: 8px;
   font: inherit;
   border: 1px solid #ccc;
@@ -54,14 +103,58 @@ textarea {
   resize: vertical;
 }
 
-button {
-  padding: 6px 12px;
+button,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
   font: inherit;
+  text-decoration: none;
   cursor: pointer;
+  border: 1px solid #222;
+  border-radius: 4px;
+  background: #fff;
+  color: #222;
+  transition: background 0.15s, color 0.15s;
+}
+
+button:hover,
+.btn:hover {
+  background: #f0883e;
+  border-color: #f0883e;
+  color: #fff;
 }
 
 .actions {
   display: flex;
   gap: 8px;
   margin-top: 8px;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-top: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabs button {
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 8px 12px;
+  background: none;
+  color: #666;
+  font-weight: 500;
+}
+
+.tabs button:hover {
+  background: none;
+  color: #111;
+}
+
+.tabs button.active {
+  color: #f0883e;
+  font-weight: 600;
+  border-bottom-color: #f0883e;
 }
