@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import { Pencil, Trash2 } from "lucide-react"
 import Tabs from "../components/Tabs"
 import { getArticles, updateArticle } from "../services/api"
 
@@ -23,7 +24,7 @@ export default function AllPosts() {
 
 	return (
 		<div>
-			<Link to="/add-new">+ Add New</Link>
+			<Link to="/add-new" className="btn">+ Add New</Link>
 			<Tabs active={activeTab} onChange={setActiveTab} />
 			<table>
 				<thead>
@@ -39,8 +40,12 @@ export default function AllPosts() {
 							<td>{a.title}</td>
 							<td>{a.category}</td>
 							<td>
-								<Link to={`/edit/${a.id}`}>Edit</Link>
-								<button onClick={() => handleTrash(a)}>Trash</button>
+								<Link to={`/edit/${a.id}`} className="icon-btn" title="Edit">
+									<Pencil size={16} />
+								</Link>
+								<button className="icon-btn" title="Trash" onClick={() => handleTrash(a)}>
+									<Trash2 size={16} />
+								</button>
 							</td>
 						</tr>
 					))}
