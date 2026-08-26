@@ -15,10 +15,12 @@ export default function AddNew() {
 			alert("Title minimal 20 karakter")
 			return
 		}
+
 		if (form.content.length < 200) {
 			alert("Content minimal 200 karakter")
 			return
 		}
+
 		if (form.category.length < 3) {
 			alert("Category minimal 3 karakter")
 			return
@@ -39,11 +41,19 @@ export default function AddNew() {
 				</div>
 				<div>
 					<label>Content</label>
-					<textarea name="content" value={form.content} onChange={handleChange} />
+					<textarea
+						name="content"
+						value={form.content}
+						onChange={handleChange}
+					/>
 				</div>
 				<div>
 					<label>Category</label>
-					<input name="category" value={form.category} onChange={handleChange} />
+					<input
+						name="category"
+						value={form.category}
+						onChange={handleChange}
+					/>
 				</div>
 				<div className="actions">
 					<button onClick={() => handleSubmit("Publish")}>Publish</button>

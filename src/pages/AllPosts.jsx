@@ -40,12 +40,14 @@ export default function AllPosts() {
 							<td>{a.title}</td>
 							<td>{a.category}</td>
 							<td>
-								<Link to={`/edit/${a.id}`} className="icon-btn" title="Edit">
-									<Pencil size={16} />
-								</Link>
-								<button className="icon-btn" title="Trash" onClick={() => handleTrash(a)}>
-									<Trash2 size={16} />
-								</button>
+								<div className="row-actions">
+									<Link to={`/edit/${a.id}`} className="icon-btn" title="Edit">
+										<Pencil size={16} />
+									</Link>
+									<button className="icon-btn" title="Trash" onClick={() => handleTrash(a)}>
+										<Trash2 size={16} />
+									</button>
+								</div>
 							</td>
 						</tr>
 					))}

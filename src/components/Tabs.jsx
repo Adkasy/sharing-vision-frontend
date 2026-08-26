@@ -2,12 +2,12 @@ const TABS = ["Publish", "Draft", "Thrash"]
 
 export default function Tabs({ active, onChange }) {
 	return (
-		<div>
+		<div className="tabs">
 			{TABS.map((tab) => (
 				<button
 					key={tab}
+					className={active === tab ? "active" : ""}
 					onClick={() => onChange(tab)}
-					style={{ fontWeight: active === tab ? "bold" : "normal" }}
 				>
 					{tab}
 				</button>

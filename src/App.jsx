@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import AllPosts from "./pages/AllPosts"
-// import AddNew from "./pages/AddNew"
-// import EditArticle from "./pages/EditArticle"
-// import Preview from "./pages/Preview"
+import AddNew from "./pages/AddNew"
+import EditArticle from "./pages/EditArticle"
+import Preview from "./pages/Preview"
 
 function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<AllPosts />} />
-				{/* <Route path="/add-new" element={<AddNew />} />
+				<Route path="/add-new" element={<AddNew />} />
 				<Route path="/edit/:id" element={<EditArticle />} />
-				<Route path="/preview" element={<Preview />} /> */}
+				<Route path="/preview" element={<Preview />} />
 			</Routes>
 		</BrowserRouter>
 	)
