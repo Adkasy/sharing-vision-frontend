@@ -10,3 +10,58 @@
 body {
   margin: 0;
 }
+
+#root {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+form, .field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 480px;
+  margin-top: 16px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input, textarea {
+  padding: 8px;
+  font: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  padding: 6px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}

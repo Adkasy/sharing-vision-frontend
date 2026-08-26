@@ -44,20 +44,24 @@ export default function EditArticle() {
 		<div>
 			<Link to="/">← Back</Link>
 			<h2>Edit Article</h2>
-			<div>
-				<label>Title</label>
-				<input name="title" value={form.title} onChange={handleChange} />
+			<div className="field-group">
+				<div>
+					<label>Title</label>
+					<input name="title" value={form.title} onChange={handleChange} />
+				</div>
+				<div>
+					<label>Content</label>
+					<textarea name="content" value={form.content} onChange={handleChange} />
+				</div>
+				<div>
+					<label>Category</label>
+					<input name="category" value={form.category} onChange={handleChange} />
+				</div>
+				<div className="actions">
+					<button onClick={() => handleSubmit("Publish")}>Publish</button>
+					<button onClick={() => handleSubmit("Draft")}>Draft</button>
+				</div>
 			</div>
-			<div>
-				<label>Content</label>
-				<textarea name="content" value={form.content} onChange={handleChange} />
-			</div>
-			<div>
-				<label>Category</label>
-				<input name="category" value={form.category} onChange={handleChange} />
-			</div>
-			<button onClick={() => handleSubmit("Publish")}>Publish</button>
-			<button onClick={() => handleSubmit("Draft")}>Draft</button>
 		</div>
 	)
 }
