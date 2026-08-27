@@ -1,16 +1,51 @@
-# React + Vite
+# Sharing Vision (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend untuk pengelolaan artikel (All Posts, Add New, Edit, Preview), dibuat untuk technical test Sharing Vision. Terhubung ke [sharing-vision-backend](https://github.com/Adkasy/sharing-vision-backend).
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React + Vite
+- React Router (`react-router-dom`)
+- Axios
+- `lucide-react` untuk icon
+- Hosting: [Vercel](https://vercel.com)
 
-## React Compiler
+## Cara Menjalankan (Local)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clone repo ini dan masuk ke foldernya:
 
-## Expanding the ESLint configuration
+   ```bash
+   git clone https://github.com/Adkasy/sharing-vision-frontend.git
+   cd sharing-vision-frontend
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Buat file `.env` di root folder, isi dengan URL backend:
+
+   ```
+   VITE_API_URL=http://localhost:3000
+   ```
+
+   Ganti dengan URL backend production kalau backend sudah di-deploy ke Render.
+
+   Pastikan backend ([sharing-vision-backend](https://github.com/Adkasy/sharing-vision-backend)) sudah berjalan terlebih dahulu sebelum menjalankan frontend, supaya data bisa ke-load.
+
+4. Jalankan aplikasi:
+   ```bash
+   npm run dev
+   ```
+   Aplikasi akan berjalan di `http://localhost:5173`.
+
+## Halaman
+
+| Route       | Deskripsi                                                     |
+| ----------- | ------------------------------------------------------------- |
+| `/`         | All Posts — tabel artikel dengan tab Publish / Draft / Thrash |
+| `/add-new`  | Form membuat artikel baru                                     |
+| `/edit/:id` | Form edit artikel (title, content, category)                  |
+| `/preview`  | Daftar artikel dengan status Publish, dengan pagination       |
