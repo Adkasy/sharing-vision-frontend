@@ -2,6 +2,8 @@
 
 Frontend untuk pengelolaan artikel (All Posts, Add New, Edit, Preview), dibuat untuk technical test Sharing Vision. Terhubung ke [sharing-vision-backend](https://github.com/Adkasy/sharing-vision-backend).
 
+**Live:** https://sharing-vision-frontend-red.vercel.app/
+
 ## Tech Stack
 
 - React + Vite
@@ -31,7 +33,7 @@ Frontend untuk pengelolaan artikel (All Posts, Add New, Edit, Preview), dibuat u
    VITE_API_URL=http://localhost:3000
    ```
 
-   Ganti dengan URL backend production kalau backend sudah di-deploy ke Render.
+   Ganti dengan URL backend production kalau backend sudah di-deploy (lihat Live URL di README backend).
 
    Pastikan backend ([sharing-vision-backend](https://github.com/Adkasy/sharing-vision-backend)) sudah berjalan terlebih dahulu sebelum menjalankan frontend, supaya data bisa ke-load.
 
